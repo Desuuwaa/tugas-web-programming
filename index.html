@@ -15,6 +15,7 @@
 
         <link rel="icon" type="image/x-icon" href="src/favicon">
         <link rel="stylesheet" href="src/styles/style.css">
+        <link rel="stylesheet" href="src/styles/mediaseribu.css">
 
         <title>Tugas Web Programming</title>
     </head>
@@ -26,24 +27,26 @@
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Project</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <section class="hero">
-                <img src="src/web/besar/a12.webp" width="300" alt="gambar profil utama sebuah website">
-
+            <section class="hero" id="hero">
+                <figure>
+                    <img src="src/web/besar/a12.webp" width="300" alt="gambar profil utama sebuah website">
+                </figure>
+                
                 <article>
                     <h1>Art Blog</h1>
                     <p>Menggambar dari kanvas kosong selalu jadi cara favoritku untuk menyalurkan imajinasi. Melalui eksperimen visual ini, aku belajar mengeksplorasi konsep, bentuk, dan ide-ide baru yang bisa diterapkan ke dalam karya yang lebih luas.</p>
                 </article>
             </section>
 
-            <section class="section-card tentang">
+            <section class="section-card tentang" id="about">
                 <div>
                     <h2>Hai, <br>Saya Dede Suwarman!</h2>
                     
@@ -53,26 +56,30 @@
                 </div>
             </section>
 
-            <section class="section-card karya-pribadi">
-                <div>
+            <section class="section-card karya-pribadi" id="project">
+                <div class="div-satu">
                     <h2>Karya Pribadi</h2>
                     <p>Kumpulan latihan mandiri</p>
                 </div>
                 
-                <article>
-                    <img src="src/web/thumb/10_5-4-2024.webp" width="180" alt="gambar thumbnail">
-                    <img src="src/web/thumb/11_18-4-2024.webp" width="180" alt="gambar thumbnail">
-                    <img src="src/web/thumb/12_19-4-2024.webp" width="180" alt="gambar thumbnail">
-                    <img src="src/web/thumb/13_20-4-2024 - 1.webp" width="180" alt="gambar thumbnail">
-                    <img src="src/web/thumb/13_20-4-2024.webp" width="180" alt="gambar thumbnail">
-                    <img src="src/web/thumb/14_21-4-2024.webp" width="180" alt="gambar thumbnail">
-                    <img src="src/web/thumb/15_22-4-2024.webp" width="180" alt="gambar thumbnail">
-                </article>
+                <div class="div-dua">
+                    <article>
+                        <img src="src/web/thumb/10_5-4-2024.webp" width="180" alt="gambar thumbnail">
+                        <img src="src/web/thumb/11_18-4-2024.webp" width="180" alt="gambar thumbnail">
+                        <img src="src/web/thumb/12_19-4-2024.webp" width="180" alt="gambar thumbnail">
+                        <img src="src/web/thumb/13_20-4-2024 - 1.webp" width="180" alt="gambar thumbnail">
+                        <img src="src/web/thumb/13_20-4-2024.webp" width="180" alt="gambar thumbnail">
+                        <img src="src/web/thumb/14_21-4-2024.webp" width="180" alt="gambar thumbnail">
+                        <img src="src/web/thumb/15_22-4-2024.webp" width="180" alt="gambar thumbnail">
+                    </article>
+
+                    <a href="file/galeri.html">Lihat</a>
+                </div>
             </section>
         </main>
 
-        <footer>
-            <a href="#"><img src="src/images/github.png" alt="github profile" width="40"></a>
+        <footer id="contact">
+            <a href="https://github.com/Desuuwaa/tugas-web-programming"><img src="src/images/github.png" alt="github profile" width="40"></a>
 
             <p>Tugas Web Pemrograman &copy 2026, STMIK Rosma</p>
         </footer>
