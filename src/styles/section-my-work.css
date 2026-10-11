@@ -48,13 +48,12 @@ section.my-work p {
 section.my-work article {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 100px 10px 40px;
-    width: 100%;
-    overflow-x: auto;
+    max-width: 100%;
+    overflow-x: scroll;
     column-gap: 10px;
-    border-radius: inherit;
     background-color: rgba(77, 42, 0, .2);
     border-top: 1px solid #4D2A00;
     border-bottom: 1px solid #4D2A00;
@@ -76,4 +75,76 @@ section.my-work .div-dua a {
 section.my-work article img {
     border: 1px solid #4D2A00;
     border-radius: 20px;
+}
+
+
+
+@media screen and (min-width: 1600px) {
+    section.my-work {
+        position: relative;
+        background-color: #65D0F4;
+        border-radius: 30px 30px 0 0;
+    }
+
+    section.my-work::before {
+        content: "";
+        width: 300px;
+        height: 300px;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 50% 0 50% 100%;
+    }
+
+    section.my-work h2 {
+        background-color: #0D1C42;
+        color: white;
+    }
+
+    section.my-work p {
+        color: #0D1C42;
+        font-weight: bold;
+    }
+
+    section.my-work .div-dua {
+        border-top-color: #0D1C42;
+    }
+
+    section.my-work .div-dua article a {
+        all: initial;
+
+        display: block;
+    }
+
+    section.my-work .div-dua > a {
+        background-color: #0D1C42;
+        color: white;
+        border: 2px solid transparent;
+    }
+
+    section.my-work .div-dua > a:hover {
+        border: 2px solid white;
+        background-color: #99acdb;
+        color: #0D1C42;
+    }
+
+    section.my-work article {
+        overflow-x: scroll;
+        background-color: transparent;
+        scrollbar-color: #0D1C42 #65D0F4;
+        border-radius: 30px 30px 0 0;
+    }
+
+    section.my-work .div-dua article a {
+        filter: grayscale(100%);
+    }
+
+    section.my-work .div-dua article a:hover {
+        filter: grayscale(0);
+    }
+
+    section.my-work .div-dua article a img {
+        border-color: #22396F;
+    }
 }

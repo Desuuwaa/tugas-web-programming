@@ -1,4 +1,4 @@
-.hero {
+section.hero {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -9,7 +9,8 @@
     background-color: #F2A900;
 }
 
-.hero figure, picture {
+section.hero figure,
+section.hero picture {
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -17,20 +18,20 @@
     box-shadow: 4px 10px 2px 3px rgb(66, 32, 2);
 }
 
-.hero img {
+section.hero img {
     max-width: 100%;
     border-radius: inherit;
     object-fit: cover;
     object-position: top;
 }
 
-.hero article {
+section.hero article {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
 }
 
-.hero article h1 {
+section.hero article h1 {
     font-family: "Cormorant Upright", serif;
     font-weight: 700;
     font-style: normal;
@@ -40,15 +41,99 @@
     border-bottom: 2px solid #4D2A00;
 }
 
-.hero article p {
+section.hero article p {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-style: normal;
     text-align: justify;
     text-indent: 25px;
     line-height: 26px;
+    font-size: 1.05rem;
 }
 
-.hero article p:first-letter {
+section.hero article p:first-letter {
     font-size: 1.5rem;
+}
+
+
+
+@media screen and (min-width: 1600px) {
+    section.hero {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 20px;
+        height: 100vh;
+        background-color: #65D0F4;
+        perspective: 400px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    section.hero::before {
+        content: "";
+        width: 150px;
+        height: 150px;
+        background-image: url(../images/start.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    section.hero::before {
+        top: 12%;
+        left: 25%;
+        animation-duration: 2s;
+        animation-name: bintangMuter1;
+    }
+
+    section.hero figure {
+        grid-row: 1/span 4;
+        grid-column: 1/span 2;
+        height: 100%;
+    }
+
+    section.hero article {
+        grid-column: 3/span 2;
+        grid-row: 4/span 1;
+
+    }
+
+    section.hero article h1 {
+        text-shadow: 3px 0 #0D1C42, -3px 0 #0D1C42, 0 3px #0D1C42, 0 -3px #0D1C42, 2px 2px #0D1C42, 2px -2px #0D1C42, -2px 2px #0D1C42, -2px -2px #0D1C42;
+        color: #FCF1D0;
+        border-bottom: 2px solid #0D1C42;
+    }
+
+    section.hero article p {
+        color: #0D1C42;
+        font-weight: bold;
+    }
+
+
+    section.hero figure img {
+        object-fit: cover;
+        object-position: center center;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #0D1C42;
+    }
+
+
+    @keyframes bintangMuter {
+        from {transform: rotateZ(0);}
+        to {transform: rotateZ(-360deg);}
+    }
+
+    @keyframes bintangMuter1 {
+        from {
+            transform: rotateX(-45deg) rotateZ(0);
+        }
+        to {
+            transform: rotateX(-45deg) rotateZ(-360deg);
+        }
+    }
 }

@@ -1,0 +1,22 @@
+@media screen and (min-width: 1600px) {
+    .main-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 1200px;
+        row-gap: 10px;
+    }
+
+    body {
+        height: 100vh;
+        background-color: #EADFCB;
+    }
+}

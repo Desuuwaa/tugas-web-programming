@@ -1,8 +1,13 @@
 @import "settings.css";
 @import "header.css";
 @import "navbar.css";
+@import "main.css";
 @import "section-hero.css";
 @import "section-about.css";
 @import "section-my-work.css";
 @import "footer.css";
 @import "card.css";
+
+html {
+    scroll-behavior: smooth;
+}

@@ -1,3 +1,7 @@
+@import "header.css";
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -20,18 +24,21 @@ img {
     border-radius: 30px;
 }
 
-@media screen and (min-width: 1000px) {
-    main {
-        column-count: 3     ;
-    }
-
-    img {
-        border-color: #0D1C42;
-    }
+@media screen and (min-width: 640px) {
+    main {column-count: 3;}
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1000px) {
+    main {column-count: 4;}
+
+    img {border-color: #0D1C42;}
+}
+
+@media screen and (min-width: 1600px) {
     main {
-        column-count: 6;
+        width: 1200px;
+        background-color: #65D0F4;
+        column-count: 5;
+        margin: auto;
     }
 }

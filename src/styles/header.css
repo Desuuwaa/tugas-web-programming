@@ -18,7 +18,7 @@ header > a {
     text-decoration-line: none;
     color: #F9E6A8;
     background-color: #4D2A00;
-    padding: 9px;
+    padding: 1em;
     border-top-left-radius: 40%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 40%;
@@ -26,4 +26,62 @@ header > a {
     font-family: "Sofia", cursive;
     font-weight: 700;
     font-size: 1.05rem;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    column-gap: 10px;
+}
+
+header nav ul li a {
+    display: inline-block;
+    background-color: #F9E6A8;
+    padding: .2em;
+    border-radius: 10px;
+    color: #4D2A00;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+
+
+@media screen and (min-width: 1600px) {
+    header {
+        background-color: #65D0F4;
+        border: 3px solid #0D1C42;
+        flex-direction: column;
+        position: fixed;
+        top: 50%;
+        left: 2rem;
+        width: max-content;
+        height: 60vh;
+        transform: translateY(-50%);
+        border-radius: 24px;
+    }
+
+    header > a,
+    header nav ul li a {
+        background-color: #0D1C42;
+        color: white;
+        border: 2px solid transparent;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    header nav ul li a {
+        padding: 1em;
+    }
+
+    header > a:hover,
+    header nav ul li a:hover {
+        border: 2px solid white;
+        background-color: #99acdb;
+        color: #0D1C42;
+    }
 }
